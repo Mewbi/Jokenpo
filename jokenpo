@@ -1,0 +1,219 @@
+#!/bin/bash
+
+#-----------------------------------------------|
+# Autor: Felipe Fernandes
+#
+# Programa: Jokenpo
+#
+# Data: 08/06/2019
+#-----------------------------------------------|
+
+while : ; do
+clear
+   cat << END
+
+    Jokenpô
+
+ 1) Pedra
+ 2) Papel
+ 3) Tesoura
+
+ 0) Sair
+
+END
+    #Selecionando uma opcao
+    read -p "Digite o número do que será jogado: " opcao
+    #Maquina selecionando uma opcao
+    maquina=$(echo $((($RANDOM %3) + 1)))
+
+    case $opcao in
+	1) # Caso o jogador selecione pedra
+	if [ "$maquina" = "1" ] #Maquina selecionou pedra
+	   then
+	   cat << END
+
+    Você	 Máquina
+    ____	 ____
+  _/  _ \\      _/    \\
+ / _ - _ \\    / _ - _ \\
+ \\_______/    \\_______/ 
+
+   ┌─┐┌┬┐┌─┐┌─┐┌┬┐┌─┐ 
+   ├┤ │││├─┘├─┤ │ ├┤  
+   └─┘┴ ┴┴  ┴ ┴ ┴ └─┘ 
+               
+END
+	fi
+
+	if [ "$maquina" = "2" ] #Maquina selecionou papel
+	   then
+	   cat << END
+
+    Você	 Máquina
+    ____	  _____
+  _/  _ \\        O_____O
+ / _ - _ \\       /     /
+ \\_______/      /____ /
+               O_____O
+                   
+   ┌─┐┌─┐┬─┐┌┬┐┌─┐┬ ┬ 
+   ├─┘├┤ ├┬┘ ││├┤ │ │ 
+   ┴  └─┘┴└──┴┘└─┘└─┘ 
+                   
+END
+	fi
+
+	if [ "$maquina" = "3" ] #Maquina selecionou tesoura
+	   then
+	   cat << END
+
+    Você	 Máquina
+                  _    _
+    ____         (_)  / )
+  _/  _ \\          | (_/ 
+ / _ - _ \\        _+/  
+ \\_______/       //|\\
+                // ||
+               (/  |/ 
+
+   ┬  ┬┌─┐┌┐┌┌─┐┌─┐┬ ┬
+   └┐┌┘├┤ ││││  ├┤ │ │
+    └┘ └─┘┘└┘└─┘└─┘└─┘
+
+END
+	fi
+	read -p "Pressione ENTER para prosseguir"
+	;;
+
+	2) # Caso o jogador selecione papel
+	if [ "$maquina" = "1" ] #Maquina selecionou pedra
+	   then
+	   cat << END
+
+     Você	 Máquina
+    _____         ____
+   O_____O      _/  _ \\
+   /     /     / _ - _ \\
+  /____ /      \\_______/
+ O_____O
+
+   ┬  ┬┌─┐┌┐┌┌─┐┌─┐┬ ┬
+   └┐┌┘├┤ ││││  ├┤ │ │
+    └┘ └─┘┘└┘└─┘└─┘└─┘
+               
+END
+	fi
+
+	if [ "$maquina" = "2" ] #Maquina selecionou papel
+	   then
+	   cat << END
+
+     Você	 Máquina
+    _____         _____
+   O_____O       O_____O
+   /     /       /     /
+  /____ /       /____ /
+ O_____O       O_____O
+
+   ┌─┐┌┬┐┌─┐┌─┐┌┬┐┌─┐ 
+   ├┤ │││├─┘├─┤ │ ├┤  
+   └─┘┴ ┴┴  ┴ ┴ ┴ └─┘ 
+                   
+END
+	fi
+
+	if [ "$maquina" = "3" ] #Maquina selecionou tesoura
+	   then
+	   cat << END
+
+     Você	 Máquina
+                  _    _
+    _____        (_)  / )
+   O_____O         | (_/
+   /     /        _+/
+  /____ /        //|\\
+ O_____O        // ||
+               (/  |/
+
+   ┌─┐┌─┐┬─┐┌┬┐┌─┐┬ ┬ 
+   ├─┘├┤ ├┬┘ ││├┤ │ │ 
+   ┴  └─┘┴└──┴┘└─┘└─┘
+
+END
+	fi
+	read -p "Pressione ENTER para prosseguir"
+	;;
+
+	3) # Caso o jogador selecione tesoura
+	if [ "$maquina" = "1" ] #Maquina selecionou pedra
+	   then
+	   cat << END
+
+     Você	 Máquina
+    _    _
+   (_)  / )       ____
+     | (_/      _/  _ \\
+    _+/        / _ - _ \\
+   //|\\        \\_______/
+  // ||
+ (/  |/ 
+
+   ┌─┐┌─┐┬─┐┌┬┐┌─┐┬ ┬ 
+   ├─┘├┤ ├┬┘ ││├┤ │ │ 
+   ┴  └─┘┴└──┴┘└─┘└─┘
+               
+END
+	fi
+
+	if [ "$maquina" = "2" ] #Maquina selecionou papel
+	   then
+	   cat << END
+
+     Você	 Máquina
+    _    _
+   (_)  / )       _____
+     | (_/       O_____O
+    _+/          /     /
+   //|\\         /____ /
+  // ||        O_____O
+ (/  |/ 
+
+   ┬  ┬┌─┐┌┐┌┌─┐┌─┐┬ ┬
+   └┐┌┘├┤ ││││  ├┤ │ │
+    └┘ └─┘┘└┘└─┘└─┘└─┘
+                   
+END
+	fi
+
+	if [ "$maquina" = "3" ] #Maquina selecionou tesoura
+	   then
+	   cat << END
+
+     Você	 Máquina
+    _    _       _    _
+   (_)  / )     (_)  / )
+     | (_/        | (_/
+    _+/          _+/
+   //|\\         //|\\
+  // ||        // ||
+ (/  |/       (/  |/
+
+   ┌─┐┌┬┐┌─┐┌─┐┌┬┐┌─┐ 
+   ├┤ │││├─┘├─┤ │ ├┤  
+   └─┘┴ ┴┴  ┴ ┴ ┴ └─┘ 
+
+END
+	fi
+	read -p "Pressione ENTER para prosseguir"
+	;;
+
+	0) # Saindo do programa
+	break
+	;; 
+
+	*) # Caso o jogador digite algo inválido
+	echo -e "\n Opção inválida \n"
+	read -p "Pressione ENTER para prosseguir"
+    esac
+
+done
