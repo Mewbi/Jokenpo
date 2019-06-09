@@ -27,6 +27,7 @@ perdeu ou empatou.
   
 ## Vídeo Tutorial
    O seguinte vídeo ensina o passo a passo de como fazer este jogo:
+   https://youtu.be/9cjluYBtOs4
    
 ## Contato
   Caso tenha alguma dúvida ou sugestão, por favor entrar em contato: < felipefernandesgsc@gmail.com >
